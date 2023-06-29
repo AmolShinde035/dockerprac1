@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            alert("document is ready")
+            $("#submit").click(function (e) {
+                var url="http://localhost:9000/getDataTable?name="+$("#name").val()+"/bdate="+$("#bdate").val()+"/email="+$("#email").val()+"/qualification="+$("#qualification").val();
+                $.get(url,function(data,status){
+                    if(status=='success')
+                    {
+                        var country=JSON.parse(data);
+                        document.getElementById("tab").innerHTML=country;
+                    }
+                })
+            })
+            
+        });
+    </script> -->
+</head>
+
+<body>
+    <form action="http://localhost:9000/getDataTable" method="post">
+    <!-- <form> -->
+        <p>Enter name:</p>
+        <input type="text" name="name" id="name">
+        <p>Enter birthdate:</p>
+        <input type="date" name="bdate" id="bdate">
+        <p>Enter email:</p>
+        <input type="text" name="email" id="email">
+        <p>Enter qualification:</p>
+        <input type="text" name="qualification" id="qualification">
+        <input type="submit" name="submit">
+        <div id="tab">.....</div>
+    </form>
+</body>
+
+</html>
